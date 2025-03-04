@@ -1,5 +1,5 @@
 {
-  "name": "my-vite-app",
+  "name": "boilerplatefrost",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/postcss7-compat": "^2.2.17",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.3",
+    "@tailwindcss/vite": "^4.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router": "^7.2.0",
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {

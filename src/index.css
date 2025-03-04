@@ -1,3 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities; 
+@import "tailwindcss";
+
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+  font-family: general-sans;
+  color: white;
+  overflow-x: hidden;
+  width: 100%;
+  background-color: #0F172A;
+}
+
+
+@font-face {
+  font-family: 'General Sans Medium';
+  src: url('./assets/fonts/GeneralSans-Medium.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'General Sans SemiBold';
+  src: url('./assets/fonts/GeneralSans-SemiBold.otf') format('truetype');
+}
+
+.font-medium {
+  font-family: 'General Sans Medium';
+}
+
+.font-bold {
+  font-family: 'General Sans SemiBold';
+}
+
+img,
+video {
+  pointer-events: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+}
+
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline: none;
+}
+
+img::selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  background-color: hsla(240, 2%, 90%, 0.1);
+}
+
+::-moz-selection {
+  background-color: hsla(240, 2%, 90%, 0.1);
+}
+
+::-webkit-scrollbar {
+   width: 0px; /* invisible scroll bar for now */
+}
+
+/* ------------------------------------------------------------ */
+
+
+.glass-box {
+  @apply rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[hsla(217,91%,60%,0.2)] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px];
+}
