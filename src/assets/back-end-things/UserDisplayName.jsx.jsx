@@ -1,5 +1,8 @@
 const UserDisplayName = ({ name, className }) => {
-  return <p className={className}>John Doe</p>; // I suppose you'll write {name} here
+  return (
+    <p className={className}>John Doe</p>
+    // <p className={className}>{name}</p>
+  )
 };
 
 export default UserDisplayName;

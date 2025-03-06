@@ -2,7 +2,7 @@
 
 function HomePage() {
   return (
-    <>...</>
+    <>WTF??</>
   )
 }
 
