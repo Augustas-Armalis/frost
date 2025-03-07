@@ -1,9 +1,10 @@
 const Affiliate = () => {
   return (
 
-    <div className="ml-10 relative">
-      <h1>Affiliate</h1>
-      <a href="/homepage">Back</a>
+    <div className="!ml-100 !mt-100 relative z-40">
+      <h1>AFFILIATE</h1>
+      <div className="spacer h-[200vh]">
+      </div>
     </div>
 
   )

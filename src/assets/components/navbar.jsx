@@ -32,9 +32,9 @@ const Navbar = () => {
   };
 
   return (
-  <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-99999">
+  <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-99999 max-[418px]:!inset-x-4 max-[402px]:!h-[48px]">
 
-    <div className="nav-buttons absolute flex flex-row gap-2 justify-center items-center h-full transform -translate-x-1/2 left-1/2">
+    <div className="nav-buttons absolute flex flex-row gap-2 justify-center items-center h-full transform -translate-x-1/2 left-1/2 max-[870px]:hidden">
 
       <div className="flex w-fit gap-2">
         <NavBtn path="/" icon="src/assets/images/icons/browse games.png" label="Browse Games" />
@@ -45,14 +45,13 @@ const Navbar = () => {
     </div>
 
 
-    <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9">
-      <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className=" h-[23px]" />
+    <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4">
+      <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className="h-[23px] max-[402px]:!h-[18px]" />
     </a>
 
 
-    <div>
-      <div 
-        className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative" onClick={toggleMenu}>
+    <div className="max-[870px]:hidden">
+      <div className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative" onClick={toggleMenu}>
           <PfpImg className="w-[45px] h-[45px] rounded-full" />
       </div>
 
@@ -65,13 +64,15 @@ const Navbar = () => {
         <div className="divider w-full h-[1px] bg-white/10 relative"></div>
 
         <PfpBtn path="/" icon="src/assets/images/icons/profile.png" label="Profile"/>
-        <PfpBtn path="/" icon="src/assets/images/icons/settings.png" label="Settings"/>
+        <PfpBtn path="/settings" icon="src/assets/images/icons/settings.png" label="Settings"/>
         
         <div className="divider w-full h-[1px] bg-white/10 relative"></div>
 
         <PfpBtn path="/" icon="src/assets/images/icons/log out.png" label="Log-out"/>
       </div>
     </div>
+
+    <div className="burger-menu !mr-4 hidden max-[870px]:block">===</div>
 
   </div>
   )

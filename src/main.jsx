@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import HomePage from './index.jsx'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TestPage from './TestPage.jsx';
+
 import Affiliate from "./assets/pages/Affiliate.jsx"
 import Dashboard from "./assets/pages/Dashboard.jsx"
+import Subscriptions from "./assets/pages/Subscriptions.jsx"
+import Settings from "./assets/pages/Settings.jsx"
 
 import Navbar from "./assets/components/navbar.jsx"
 import Sidebar from "./assets/components/sidebar.jsx"
@@ -24,6 +25,8 @@ createRoot(document.getElementById('root')).render(
       <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/affiliate" element={<Affiliate />} />
+      <Route path="/subscriptions" element={<Subscriptions />} />
+      <Route path="/settings" element={<Settings />} />
       </Routes>
 
       </div>
