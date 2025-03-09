@@ -70,16 +70,34 @@ img::selection {
 }
 
 ::-webkit-scrollbar {
-   width: 0px; /* invisible scroll bar for now */
+   width: 0px; /* invisible scroll bar for now. Idk if to add it or not */
 }
 
 /* ------------------------------------------------------------ */
 
 
 .glass-box {
-  @apply rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[hsla(217,91%,60%,0.2)] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px];
+  @apply rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[hsla(217,91%,60%,0.2)] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[15px];
 }
 
 .gray-1{
   color: #DBEAFE;
+}
+
+.gray-2{
+  color: #A2A8C3;
+}
+
+
+
+
+
+.activity-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.activity-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #2563EB 0%, #22D3EE 70.09%, #FFF 138.79%);
+  border-radius: 10px;
+  cursor: pointer;
 }
