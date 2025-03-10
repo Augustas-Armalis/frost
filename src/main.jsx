@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')).render(
 
     <BrowserRouter>
 
-    <div className="bck-behind-snowflake fixed w-full h-full bg-[radial-gradient(circle_at_50%_100%,rgba(59,131,246,0.8)0%,rgba(59,130,246,0.45)50%,rgba(139,92,246,0)100%)]"></div>
+    <div className="bck-behind-snowflake fixed w-full h-full bg-[radial-gradient(circle_at_50%_100%,rgba(59,131,246,0.6)0%,rgba(59,130,246,0.35)50%,rgba(139,92,246,0)90%)]"></div>
 
     <div className="bck-snowflake absolute w-full h-auto bg-[url('./assets/images/bck-snowflakes.png')] bg-[length:1920px_1920px] bg-repeat">
     

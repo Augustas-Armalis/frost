@@ -61,7 +61,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-99999 max-[418px]:!inset-x-4 max-[402px]:!h-[48px]">
+    <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-99999 max-[692px]:!inset-x-4 max-[402px]:!h-[48px]">
       <div className="nav-buttons absolute flex flex-row gap-2 justify-center items-center h-full transform -translate-x-1/2 left-1/2 max-[870px]:hidden">
         <div className="flex w-fit gap-2">
           <NavBtn path="/" icon="src/assets/images/icons/browse games.png" label="Browse Games" />
@@ -92,7 +92,7 @@ const Navbar = () => {
 
         <div
           ref={menuRef}
-          className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${
+          className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl min-w-[190px] overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${
             isMenuVisible ? 'block' : 'hidden'
           }`}
         >
