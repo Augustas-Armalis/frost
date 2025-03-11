@@ -1,7 +1,8 @@
 import DashboardGreeting from "../components/DashboardGreeting.jsx"
 import RecentActivityBox from "../components/RecentActivityBox.jsx"
 import ProfileDashboard from "../components/ProfileDashboard.jsx"
-import UsageChart from "../back-end-things/UsageChart.jsx"
+import UsageChartShadcn from "../back-end-things/UsageChartShadcn.jsx"
+import ProductsDashboard from "../components/ProductsDashboard.jsx"
 
 const Dashboard = () => {
   return (
@@ -21,26 +22,14 @@ const Dashboard = () => {
         <ProfileDashboard />
         <RecentActivityBox />
         
-
-
+        
         <div className="glass-box w-[370px] h-[370px] p-6 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4">
 
-        <UsageChart />
+        <UsageChartShadcn />
 
         </div>
 
-
-
-
-
-        <div className="glass-box w-[756px] h-[370px] p-6 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4">
-
-
-
-
-
-        </div>
-
+        <ProductsDashboard />
 
 
       </div>

@@ -7,7 +7,7 @@ const RecentActivityBox = () => {
   return (
     <div className="glass-box w-[370px] h-[370px] !p-6 !pr-3 !pt-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px]">
 
-          <div className="flex items-center justify-between !pr-4 max-[402px]:!pr-[8px]">
+          <div className="flex items-center justify-between !pr-1.5">
             <p className="text-3xl font-bold max-[402px]:text-2xl ">Recent Activity</p>
             <SmallBtn path="/activity" text="View All"/>
           </div>
@@ -17,12 +17,12 @@ const RecentActivityBox = () => {
           <div className="absolute top-[72px] bottom-0 left-[46px] w-[2px] bg-white/20 z-2 max-[402px]:left-[38px]"></div>
 
             <div className="flex items-center gap-4 relative z-20 w-full [mask-image:linear-gradient(to_right,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_97%)]">
-            <ActivityImage icon="src/assets/images/icons/Rocket.webp" />
-              <div>
-                <div className="absolute top-0 left-[61px] w-full h-full flex flex-col">
-                  <ActivityTitle activityTitle="Launched Lunar" />
-                  <ActivityTime time="10 min ago" /></div>
-              </div>
+              <ActivityImage icon="src/assets/images/icons/Rocket.webp" />
+                <div>
+                  <div className="absolute top-0 left-[61px] w-full h-full flex flex-col">
+                    <ActivityTitle activityTitle="Launched Lunar" />
+                    <ActivityTime time="10 min ago" /></div>
+                </div>
             </div>
 
             <div className="flex items-center gap-4 relative z-20 w-full [mask-image:linear-gradient(to_right,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_97%)]">
@@ -61,7 +61,6 @@ const RecentActivityBox = () => {
               </div>
             </div>
 
-
             <div className="flex items-center gap-4 relative z-20 w-full [mask-image:linear-gradient(to_right,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_97%)]">
               <ActivityImage icon="src/assets/images/icons/Ok.webp" />
               <div>
@@ -70,8 +69,6 @@ const RecentActivityBox = () => {
                   <ActivityTime time="lorem XX:XX" /></div>
               </div>
             </div>
-
-
 
           </div>
 

@@ -13,12 +13,12 @@ const ProfileDashboard = () => {
 
       <div className="flex align-center justify-between w-fit flex-col h-full !pb-6 flex-shrink-0 max-[692px]:!pb-4">
         <div className="relative z-10 !mt-24 !ml-6 flex items-center bg-white/20 backdrop-blur-2xl w-fit rounded-[34px] border border-white/20 flex-shrink-0 max-[692px]:!mt-16 max-[692px]:!ml-4">
-          <PfpImg className="w-[150px] h-[150px] !m-2 rounded-3xl flex-shrink-0 max-[692px]:w-[120px] max-[692px]:h-[120px]"/>
+          <PfpImg pfpImage="src/assets/images/pfp.png" className="w-[150px] h-[150px] !m-2 rounded-3xl flex-shrink-0 max-[692px]:w-[120px] max-[692px]:h-[120px]"/>
         </div>
 
         <div>
-          <UserDisplayName className="font-bold text-white text-3xl relative z-10 !ml-6  max-[402px]:text-2xl max-[692px]:!ml-4" />
-          <UserName className="gray-2 text-lg font-medium relative z-10 !ml-6 max-[402px]:text-base max-[692px]:!ml-4" />
+          <UserDisplayName name="John Doe" className="font-bold text-white text-3xl relative z-10 !ml-6  max-[402px]:text-2xl max-[692px]:!ml-4" />
+          <UserName username="john_doe123" className="gray-2 text-lg font-medium relative z-10 !ml-6 max-[402px]:text-base max-[692px]:!ml-4" />
         </div>
       </div>
 

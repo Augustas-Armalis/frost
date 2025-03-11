@@ -1,10 +1,9 @@
 import { useLocation } from "react-router-dom";
-import SidebarUnactiveBtn from "/src/assets/buttons/sidebar-unactive-btn";
-import SidebarActiveBtn from "/src/assets/buttons/sidebar-active-btn";
-
+import SidebarUnactiveBtn from "../buttons/SidebarUnactiveBtn";
+import SidebarActiveBtn from "../buttons/SidebarActiveBtn";
 
 const Sidebar = () => {
-  const location = useLocation(); // Get the current route path
+  const location = useLocation();
 
   return (
     <div className="sidebar glass-box fixed flex flex-col justify-between left-6 top-[108px] bottom-6 w-[250px] !p-[24px] z-999999 max-[692px]:hidden">

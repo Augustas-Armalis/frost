@@ -77,7 +77,7 @@ img::selection {
 
 
 .glass-box {
-  @apply rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[hsla(217,91%,60%,0.2)] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[15px];
+  @apply rounded-[24px] border border-[rgba(255,255,255,0.3)] bg-[hsla(217,91%,60%,0.2)] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px];
 }
 
 .gray-1{
@@ -87,9 +87,6 @@ img::selection {
 .gray-2{
   color: #A2A8C3;
 }
-
-
-
 
 
 .activity-container::-webkit-scrollbar {

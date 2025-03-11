@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import PfpBtn from "../buttons/pfp-btn";
-import NavBtn from "../buttons/nav-btn";
-import UserDisplayName from "../back-end-things/UserDisplayName.jsx";
+import PfpBtn from "../buttons/PfpBtn.jsx";
+import NavBtn from "../buttons/NavBtn.jsx";
+import UserDisplayName from "../back-end-things/UserDisplayName.jsx.jsx";
 import UserName from "../back-end-things/UserName.jsx";
 import PfpImg from "../back-end-things/PfpImg.jsx";
 
@@ -54,6 +54,7 @@ const Navbar = () => {
         closeMenu();
       }
     };
+
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
@@ -70,61 +71,29 @@ const Navbar = () => {
         </div>
       </div>
 
-      <a
-        href="/"
-        className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4"
-      >
-        <img
-          src="src/assets/images/icons/frostchanger.svg"
-          alt="logo"
-          className="h-[23px] max-[402px]:!h-[18px]"
-        />
+      <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4">
+        <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className="h-[23px] max-[402px]:!h-[18px]" />
       </a>
 
       <div className="max-[870px]:hidden">
-        <div
-          ref={menuToggleRef}
-          className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative"
-          onClick={toggleMenu}
-        >
-          <PfpImg className="w-[45px] h-[45px] rounded-full" />
+        <div ref={menuToggleRef} className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative" onClick={toggleMenu}>
+          <PfpImg pfpImage="src/assets/images/pfp.png" className="w-[45px] h-[45px] rounded-full" />
         </div>
 
-        <div
-          ref={menuRef}
-          className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl min-w-[190px] overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${
-            isMenuVisible ? 'block' : 'hidden'
-          }`}
-        >
+        <div ref={menuRef} className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl min-w-[190px] overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${isMenuVisible ? 'block' : 'hidden'}`}>
           <div className="nav-name !mr-[80px] !mb-2 !ml-4">
-            <UserDisplayName className="text-white text-2xl font-bold" />
-            <UserName className="text-gray-400 text-sm font-medium" />
+            <UserDisplayName name="John Doe" className="text-white text-2xl font-bold" />
+            <UserName username="john_doe123" className="text-gray-400 text-sm font-medium" />
           </div>
 
           <div className="divider w-full h-[1px] bg-white/10 relative"></div>
 
-          {/* Pass closeMenu to each PfpBtn */}
-          <PfpBtn
-            path="/"
-            icon="src/assets/images/icons/profile.png"
-            label="Profile"
-            onClick={closeMenu}
-          />
-          <PfpBtn
-            path="/settings"
-            icon="src/assets/images/icons/settings.png"
-            label="Settings"
-            onClick={closeMenu}
-          />
-
+          <PfpBtn path="/" icon="src/assets/images/icons/profile.png" label="Profile" onClick={closeMenu} />
+          <PfpBtn path="/settings" icon="src/assets/images/icons/settings.png" label="Settings" onClick={closeMenu} />
+          
           <div className="divider w-full h-[1px] bg-white/10 relative"></div>
 
-          <PfpBtn
-            path="/"
-            icon="src/assets/images/icons/log out.png"
-            label="Log-out"
-            onClick={closeMenu}
-          />
+          <PfpBtn path="/" icon="src/assets/images/icons/log out.png" label="Log-out" onClick={closeMenu} />
         </div>
       </div>
 
