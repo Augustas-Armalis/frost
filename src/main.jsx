@@ -8,8 +8,8 @@ import Subscriptions from "./assets/pages/Subscriptions.jsx"
 import Settings from "./assets/pages/Settings.jsx"
 import Activity from "./assets/pages/Activity.jsx"
 import Products from "./assets/pages/Products.jsx"
-import Navbar from "./assets/components/navbar.jsx"
-import Sidebar from "./assets/components/sidebar.jsx"
+import Navbar from "./assets/components/Navbar.jsx"
+import Sidebar from "./assets/components/Sidebar.jsx"
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -35,10 +35,8 @@ createRoot(document.getElementById('root')).render(
 
     </div>
 
-
     <Navbar />
     <Sidebar />
-
 
 
     </BrowserRouter>

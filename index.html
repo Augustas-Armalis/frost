@@ -18,8 +18,8 @@
       function isTouchDevice() {
         return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       }
-  
-      if (!isTouchDevice()) {
+    
+      function initLenis() {
         const lenis = new Lenis({
           autoRaf: false,
           smoothWheel: true,
@@ -27,28 +27,40 @@
           gestureOrientation: 'vertical',
           lerp: 0.1,
         });
-  
+    
         const scrollPosition = sessionStorage.getItem('scrollPosition') || 0;
-  
+    
         window.addEventListener('beforeunload', () => {
           sessionStorage.setItem('scrollPosition', window.scrollY);
         });
-  
+    
         window.addEventListener('load', () => {
           window.scrollTo(0, scrollPosition);
         });
-  
+    
         function raf(time) {
           lenis.raf(time);
           requestAnimationFrame(raf);
         }
-  
+    
         requestAnimationFrame(raf);
-  
+    
         lenis.on('scroll', (e) => {
           console.log(e);
         });
       }
+    
+      function checkScreenWidth() {
+        if (window.innerWidth > 870 && !isTouchDevice()) {
+          initLenis();
+        } else {
+          console.log('Lenis disabled due to screen size or touch device.');
+        }
+      }
+    
+      window.addEventListener('load', checkScreenWidth);
+      window.addEventListener('resize', checkScreenWidth);
     </script>
+    
   </body>
 </html>

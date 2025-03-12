@@ -1,12 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+
 import PfpBtn from "../buttons/PfpBtn.jsx";
 import NavBtn from "../buttons/NavBtn.jsx";
 import UserDisplayName from "../back-end-things/UserDisplayName.jsx.jsx";
 import UserName from "../back-end-things/UserName.jsx";
 import PfpImg from "../back-end-things/PfpImg.jsx";
+import MobileNavBar from "./MobileNavBar.jsx";
+import { useLocation } from "react-router-dom";
+
 
 const Navbar = () => {
+  const location = useLocation();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const menuRef = useRef(null);
   const menuToggleRef = useRef(null);
@@ -62,44 +67,95 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-99999 max-[692px]:!inset-x-4 max-[402px]:!h-[48px]">
-      <div className="nav-buttons absolute flex flex-row gap-2 justify-center items-center h-full transform -translate-x-1/2 left-1/2 max-[870px]:hidden">
-        <div className="flex w-fit gap-2">
-          <NavBtn path="/" icon="src/assets/images/icons/browse games.png" label="Browse Games" />
-          <NavBtn path="/" icon="src/assets/images/icons/store.png" label="Store" />
-          <NavBtn path="/" icon="src/assets/images/icons/faq.png" label="FAQ" />
-        </div>
-      </div>
+    <>
+      <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-2008 max-[692px]:!inset-x-4 max-[402px]:!h-[48px]">
 
-      <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4">
-        <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className="h-[23px] max-[402px]:!h-[18px]" />
-      </a>
+        <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4">
+          <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className="h-[23px] max-[402px]:!h-[18px]" />
+        </a>
 
-      <div className="max-[870px]:hidden">
-        <div ref={menuToggleRef} className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative" onClick={toggleMenu}>
-          <PfpImg pfpImage="src/assets/images/pfp.png" className="w-[45px] h-[45px] rounded-full" />
+        <div className="nav-buttons relative flex flex-row gap-2 justify-center items-center h-full transform  max-[870px]:hidden">
+          <div className="flex w-fit gap-2">
+            <NavBtn path="/" icon="src/assets/images/icons/browse games.png" label="Browse Games" />
+            <NavBtn path="/" icon="src/assets/images/icons/store.png" label="Store" />
+            <NavBtn path="/" icon="src/assets/images/icons/faq.png" label="FAQ" />
+          </div>
         </div>
 
-        <div ref={menuRef} className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl min-w-[190px] overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${isMenuVisible ? 'block' : 'hidden'}`}>
-          <div className="nav-name !mr-[80px] !mb-2 !ml-4">
-            <UserDisplayName name="John Doe" className="text-white text-2xl font-bold" />
-            <UserName username="john_doe123" className="text-gray-400 text-sm font-medium" />
+        <div className="max-[870px]:hidden">
+          <div ref={menuToggleRef} className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear !mr-[7px] z-10 relative" onClick={toggleMenu}>
+            <PfpImg pfpImage="src/assets/images/pfp.png" className="w-[45px] h-[45px] rounded-full" />
           </div>
 
-          <div className="divider w-full h-[1px] bg-white/10 relative"></div>
+          <div ref={menuRef} className={`pfp-menu absolute flex flex-col right-[-1px] top-[-1px] !pt-[7px] !rounded-3xl min-w-[190px] overflow-hidden bg-[#2a446f] shadow-[0px_0px_20px_0px_rgba(0,140,255,0.15),0px_0px_60px_-12px_rgba(255,255,255,0.14)_inset] backdrop-blur-[10px] z-9 border border-[rgba(255,255,255,0.3)] ${isMenuVisible ? 'block' : 'hidden'}`}>
+            <div className="nav-name !mr-[80px] !mb-2 !ml-4">
+              <UserDisplayName name="John Doe" className="text-white text-2xl font-bold" />
+              <UserName username="john_doe123" className="text-gray-400 text-sm font-medium" />
+            </div>
 
-          <PfpBtn path="/" icon="src/assets/images/icons/profile.png" label="Profile" onClick={closeMenu} />
-          <PfpBtn path="/settings" icon="src/assets/images/icons/settings.png" label="Settings" onClick={closeMenu} />
-          
-          <div className="divider w-full h-[1px] bg-white/10 relative"></div>
+            <div className="divider w-full h-[1px] bg-white/10 relative"></div>
 
-          <PfpBtn path="/" icon="src/assets/images/icons/log out.png" label="Log-out" onClick={closeMenu} />
+            <PfpBtn path="/" icon="src/assets/images/icons/profile.png" label="Profile" onClick={closeMenu} />
+            <PfpBtn path="/settings" icon="src/assets/images/icons/settings.png" label="Settings" onClick={closeMenu} />
+            
+            <div className="divider w-full h-[1px] bg-white/10 relative"></div>
+
+            <PfpBtn path="/" icon="src/assets/images/icons/log out.png" label="Log-out" onClick={closeMenu} />
+          </div>
         </div>
-      </div>
 
-      <div className="burger-menu !mr-4 hidden max-[870px]:block">===</div>
-    </div>
+          {/* <div className="fixed right-6 top-6 burger-menu !mr-4 hidden max-[870px]:block">
+            <div className="w-[32px] h-[3px] bg-white rounded-full"></div>
+            <div className="w-[32px] h-[3px] bg-white rounded-full"></div>
+          </div> */}
+
+        </div>
+
+        <MobileNavBar />
+
+
+        {/* <BurgerMenu />
+
+
+        <div className="nav-container fixed w-full h-full bg-black/60 z-2009 backdrop-blur-[15px] hidden max-[870px]:hidden">
+        
+          <div className="flex flex-col justify-center items-center h-full">
+
+            <div className="flex flex-col justify-center items-center gap-2 w-fit">
+
+              <SidebarButton path="/browse-games" icon="src/assets/images/icons/browse games.png" label="Browse Games" isActive={location.pathname === "/browse-games"} />
+              <SidebarButton path="/store" icon="src/assets/images/icons/store.png" label="Store" isActive={location.pathname === "/store"} />
+              <SidebarButton path="/faq" icon="src/assets/images/icons/faq.png" label="FAQ" isActive={location.pathname === "/faq"} />
+
+            </div>
+
+            <div className="divider w-full max-w-[calc(100%-48px)] h-[1px] bg-white/20 mx-auto !mt-6 !mb-6"></div>
+
+
+            <div className="flex flex-col justify-center items-center gap-2 w-fit">
+
+              <SidebarButton path="/" icon="src/assets/images/icons/dashboard.png" label="Dashboard" isActive={location.pathname === "/"} />
+              <SidebarButton path="/subscriptions" icon="src/assets/images/icons/subscriptions.png" label="Subscriptions" isActive={location.pathname === "/subscriptions"} />
+              <SidebarButton path="/affiliate" icon="src/assets/images/icons/affiliate.png" label="Affiliate" isActive={location.pathname === "/affiliate"} />
+
+            </div>
+
+          </div>
+      
+        </div> */}
+
+
+
+    </>
   );
 };
+
+// const SidebarButton = ({ path, icon, label, isActive }) => {
+//   return isActive ? (
+//     <SidebarActiveBtn path={path} icon={icon} label={label} />
+//   ) : (
+//     <SidebarUnactiveBtn path={path} icon={icon} label={label} />
+//   );
+// };
 
 export default Navbar;

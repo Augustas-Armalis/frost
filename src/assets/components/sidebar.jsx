@@ -6,34 +6,15 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="sidebar glass-box fixed flex flex-col justify-between left-6 top-[108px] bottom-6 w-[250px] !p-[24px] z-999999 max-[692px]:hidden">
+    <div className="sidebar glass-box fixed flex flex-col justify-between left-6 top-[108px] bottom-6 w-[250px] !p-[24px] z-2008 max-[692px]:hidden">
       <div className="flex flex-col w-full gap-2">
-        <SidebarButton
-          path="/"
-          icon="src/assets/images/icons/dashboard.png"
-          label="Dashboard"
-          isActive={location.pathname === "/"}
-        />
-        <SidebarButton
-          path="/subscriptions"
-          icon="src/assets/images/icons/subscriptions.png"
-          label="Subscriptions"
-          isActive={location.pathname === "/subscriptions"}
-        />
-        <SidebarButton
-          path="/affiliate"
-          icon="src/assets/images/icons/affiliate.png"
-          label="Affiliate"
-          isActive={location.pathname === "/affiliate"}
-        />
+        <SidebarButton path="/" icon="src/assets/images/icons/dashboard.png" label="Dashboard" isActive={location.pathname === "/"} />
+        <SidebarButton path="/subscriptions" icon="src/assets/images/icons/subscriptions.png" label="Subscriptions" isActive={location.pathname === "/subscriptions"} />
+        <SidebarButton path="/affiliate" icon="src/assets/images/icons/affiliate.png" label="Affiliate" isActive={location.pathname === "/affiliate"} />
       </div>
 
-      <SidebarButton
-        path="/settings"
-        icon="src/assets/images/icons/settings.png"
-        label="Settings"
-        isActive={location.pathname === "/settings"}
-      />
+      <SidebarButton path="/settings" icon="src/assets/images/icons/settings.png" label="Settings" isActive={location.pathname === "/settings"} />
+
     </div>
   );
 };
