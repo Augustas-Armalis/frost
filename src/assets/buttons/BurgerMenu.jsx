@@ -6,7 +6,7 @@ export default function BurgerMenu({ setIsOpen, isOpen }) {
   const bottomLine = useRef(null);
 
   const handleClick = () => {
-    setIsOpen((prev) => !prev); // Toggle open state
+    setIsOpen((prev) => !prev);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function BurgerMenu({ setIsOpen, isOpen }) {
   return (
     <div
       className="fixed right-[36px] top-[36px] burger-menu hidden max-[870px]:block cursor-pointer w-[45px] h-[36px] !pt-[10px] !pb-[10px] !pr-[6px] !pl-[6px] z-3000 max-[402px]:!top-[31px] max-[402px]:!right-[30px]"
-      onClick={handleClick} // Trigger onClick
+      onClick={handleClick}
     >
       <div ref={topLine} className="w-[33px] h-[3px] bg-white rounded-full !mb-[9px]"></div>
       <div ref={bottomLine} className="w-[33px] h-[3px] bg-white rounded-full"></div>

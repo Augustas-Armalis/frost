@@ -63,7 +63,7 @@ const MobileNavBar = () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
-  const [isOpen, setIsOpen] = useState(false); // Controls nav and burger menu state
+  const [isOpen, setIsOpen] = useState(false);
   const navContainer = useRef(null);
 
   const disableScroll = () => {
@@ -100,7 +100,6 @@ const MobileNavBar = () => {
 
   return (
     <div>
-      {/* Pass both isOpen and setIsOpen to BurgerMenu */}
       <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div
@@ -109,7 +108,7 @@ const MobileNavBar = () => {
         style={{ transform: "translateX(100%)" }}
       >
 
-
+        {/* Not finished yet */}
 
         <div className="w-fit h-fit bg-red-500">
           <div ref={menuToggleRef} className="pfp-nav cursor-pointer hover:opacity-80 transition-all duration-100 ease-linear z-10 relative" onClick={toggleMenu}>
@@ -134,8 +133,6 @@ const MobileNavBar = () => {
         </div>
 
 
-
-
         <div className="flex flex-col justify-center items-center h-full">
           <div className="flex flex-col justify-center items-center gap-2 w-fit">
             <SidebarButton
@@ -143,24 +140,24 @@ const MobileNavBar = () => {
               icon="src/assets/images/icons/browse games.png"
               label="Browse Games"
               isActive={location.pathname === "/browse-games"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
             <SidebarButton
               path="/store"
               icon="src/assets/images/icons/store.png"
               label="Store"
               isActive={location.pathname === "/store"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
             <SidebarButton
               path="/faq"
               icon="src/assets/images/icons/faq.png"
               label="FAQ"
               isActive={location.pathname === "/faq"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
           </div>
 
@@ -172,24 +169,24 @@ const MobileNavBar = () => {
               icon="src/assets/images/icons/dashboard.png"
               label="Dashboard"
               isActive={location.pathname === "/"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
             <SidebarButton
               path="/subscriptions"
               icon="src/assets/images/icons/subscriptions.png"
               label="Subscriptions"
               isActive={location.pathname === "/subscriptions"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
             <SidebarButton
               path="/affiliate"
               icon="src/assets/images/icons/affiliate.png"
               label="Affiliate"
               isActive={location.pathname === "/affiliate"}
-              setIsOpen={setIsOpen} // Pass setIsOpen here
-              handleClick={() => setIsOpen(false)} // Close the nav when clicked
+              setIsOpen={setIsOpen}
+              handleClick={() => setIsOpen(false)}
             />
           </div>
         </div>
@@ -198,7 +195,6 @@ const MobileNavBar = () => {
   );
 };
 
-// SidebarButton Component
 const SidebarButton = ({ path, icon, label, isActive, setIsOpen, handleClick }) => {
   return isActive ? (
     <SidebarActiveBtn
@@ -206,7 +202,7 @@ const SidebarButton = ({ path, icon, label, isActive, setIsOpen, handleClick }) 
       path={path}
       icon={icon}
       label={label}
-      onClick={handleClick} // Pass onClick here
+      onClick={handleClick}
     />
   ) : (
     <SidebarUnactiveBtn
@@ -214,7 +210,7 @@ const SidebarButton = ({ path, icon, label, isActive, setIsOpen, handleClick }) 
       path={path}
       icon={icon}
       label={label}
-      onClick={handleClick} // Pass onClick here
+      onClick={handleClick}
     />
   );
 };
