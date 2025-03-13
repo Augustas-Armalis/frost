@@ -104,58 +104,14 @@ const Navbar = () => {
           </div>
         </div>
 
-          {/* <div className="fixed right-6 top-6 burger-menu !mr-4 hidden max-[870px]:block">
-            <div className="w-[32px] h-[3px] bg-white rounded-full"></div>
-            <div className="w-[32px] h-[3px] bg-white rounded-full"></div>
-          </div> */}
-
         </div>
 
         <MobileNavBar />
-
-
-        {/* <BurgerMenu />
-
-
-        <div className="nav-container fixed w-full h-full bg-black/60 z-2009 backdrop-blur-[15px] hidden max-[870px]:hidden">
-        
-          <div className="flex flex-col justify-center items-center h-full">
-
-            <div className="flex flex-col justify-center items-center gap-2 w-fit">
-
-              <SidebarButton path="/browse-games" icon="src/assets/images/icons/browse games.png" label="Browse Games" isActive={location.pathname === "/browse-games"} />
-              <SidebarButton path="/store" icon="src/assets/images/icons/store.png" label="Store" isActive={location.pathname === "/store"} />
-              <SidebarButton path="/faq" icon="src/assets/images/icons/faq.png" label="FAQ" isActive={location.pathname === "/faq"} />
-
-            </div>
-
-            <div className="divider w-full max-w-[calc(100%-48px)] h-[1px] bg-white/20 mx-auto !mt-6 !mb-6"></div>
-
-
-            <div className="flex flex-col justify-center items-center gap-2 w-fit">
-
-              <SidebarButton path="/" icon="src/assets/images/icons/dashboard.png" label="Dashboard" isActive={location.pathname === "/"} />
-              <SidebarButton path="/subscriptions" icon="src/assets/images/icons/subscriptions.png" label="Subscriptions" isActive={location.pathname === "/subscriptions"} />
-              <SidebarButton path="/affiliate" icon="src/assets/images/icons/affiliate.png" label="Affiliate" isActive={location.pathname === "/affiliate"} />
-
-            </div>
-
-          </div>
-      
-        </div> */}
-
-
 
     </>
   );
 };
 
-// const SidebarButton = ({ path, icon, label, isActive }) => {
-//   return isActive ? (
-//     <SidebarActiveBtn path={path} icon={icon} label={label} />
-//   ) : (
-//     <SidebarUnactiveBtn path={path} icon={icon} label={label} />
-//   );
-// };
+
 
 export default Navbar;

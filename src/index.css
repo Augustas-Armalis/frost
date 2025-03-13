@@ -62,11 +62,11 @@ img::selection {
 }
 
 ::selection {
-  background-color: hsla(240, 2%, 90%, 0.1);
+  background-color: transparent;
 }
 
 ::-moz-selection {
-  background-color: hsla(240, 2%, 90%, 0.1);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
