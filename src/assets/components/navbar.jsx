@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
-  const location = useLocation();
+  const location = useLocation()
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const menuRef = useRef(null);
   const menuToggleRef = useRef(null);
@@ -66,9 +66,25 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    gsap.from(".top-navigation-bar", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+  
+    gsap.to(".top-navigation-bar", {
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out"
+    });
+  }, []);
+
+
   return (
     <>
-      <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-2008 max-[692px]:!inset-x-4 max-[402px]:!h-[48px]">
+      <div className="top-navigation-bar glass-box fixed flex justify-between items-center top-6 inset-x-6 h-[58px] !rounded-3xl z-2008 max-[692px]:!inset-x-4 max-[402px]:!h-[48px] opacity-0">
 
         <a href="/" className="hover:opacity-80 transition-all duration-100 ease-linear !ml-9 max-[692px]:!ml-4">
           <img src="src/assets/images/icons/frostchanger.svg" alt="logo" className="h-[23px] max-[402px]:!h-[18px]" />

@@ -1,9 +1,8 @@
-const UsageChartShadcn = () => {
+const UsageChartShadcn = ({ref}) => {
     return (
-        <div className="w-full h-full font-medium text-2xl flex items-center justify-center">Shadcn</div>
-        // I tried to add the graph, but did not succeed, because as I've learned - we need to install shadcn into our project, which I tried too, but unsuccessfully...
-        // Your help would be appreciated at least with how to incorporate shadcn components into this project.
-        // Thankyou!
+        <div ref={ref} className="glass-box w-[370px] h-[370px] opacity-0 p-6 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4">
+            <div className="w-full h-full font-medium text-2xl flex items-center justify-center">Shadcn</div>
+        </div>
     )
 }
 

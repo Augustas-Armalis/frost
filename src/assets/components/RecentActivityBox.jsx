@@ -3,9 +3,9 @@ import ActivityImage from "../back-end-things/ActivityImage.jsx"
 import ActivityTitle from "../back-end-things/ActivityTitle.jsx"
 import ActivityTime from "../back-end-things/ActivityTime.jsx"
 
-const RecentActivityBox = () => {
+const RecentActivityBox = ({ref}) => {
   return (
-    <div className="glass-box w-[370px] h-[370px] !p-6 !pr-3 !pt-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px]">
+    <div ref={ref} className="glass-box w-[370px] h-[370px] !p-6 !pr-3 !pt-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px] opacity-0">
 
           <div className="flex items-center justify-between !pr-1.5">
             <p className="text-3xl font-bold max-[402px]:text-2xl ">Recent Activity</p>

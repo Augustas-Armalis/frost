@@ -5,9 +5,9 @@ import UserName from "../back-end-things/UserName.jsx"
 import BadgesDashboard from "../components/BadgesDashboard.jsx"
 import MemberSinceDashboard from "../back-end-things/MemberSinceDashboard.jsx"
 
-const ProfileDashboard = () => {
+const ProfileDashboard = ({ref}) => {
   return (
-    <div className="glass-box w-[756px] h-[370px] max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full overflow-hidden max-[692px]:h-[300px]">
+    <div ref={ref} className="glass-box w-[756px] h-[370px] max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full overflow-hidden max-[692px]:h-[300px] opacity-0">
 
     <div className="flex justify-between w-full h-full">
 
