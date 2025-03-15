@@ -1,6 +1,6 @@
-const ProductName = ({name}) => {
+const ProductName = ({name, className}) => {
   return (
-    <p className="text-xl font-bold">{name}</p>
+    <p className={`text-xl font-bold ${className}`}>{name}</p>
   )
 }
 

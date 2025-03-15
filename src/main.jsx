@@ -7,7 +7,6 @@ import Dashboard from "./assets/pages/Dashboard.jsx"
 import Subscriptions from "./assets/pages/Subscriptions.jsx"
 import Settings from "./assets/pages/Settings.jsx"
 import Activity from "./assets/pages/Activity.jsx"
-import Products from "./assets/pages/Products.jsx"
 import Navbar from "./assets/components/Navbar.jsx"
 import Sidebar from "./assets/components/Sidebar.jsx"
 
@@ -28,7 +27,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/subscriptions" element={<Subscriptions />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/activity" element={<Activity />} />
-        <Route path="/products" element={<Products />} />
       </Routes>
 
       </div>
@@ -37,6 +35,7 @@ createRoot(document.getElementById('root')).render(
 
     <Navbar />
     <Sidebar />
+
 
 
     </BrowserRouter>

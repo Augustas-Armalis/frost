@@ -7,7 +7,7 @@ const ProductsDashboard = ({ref}) => {
       
       <div className="flex items-center justify-between !pr-2 max-[402px]:!pr-[8px]">
         <p className="text-3xl font-bold max-[402px]:text-2xl">Products</p>
-        <SmallBtn path="/products" text="Manage All" />
+        <SmallBtn path="/subscriptions" text="Manage All" />
       </div>
 
       <div className="activity-container !mt-4 overflow-y-scroll overflow-x-hidden scrollbar-hidden h-[296px] max-[1462px]:h-[426px] flex flex-row flex-wrap gap-3 justify-center items-start !pb-4 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_100%)] !pr-2">

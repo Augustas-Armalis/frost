@@ -16,11 +16,11 @@ const Dashboard = () => {
     const elements = dashboardRefs.current;
   
     gsap.from(elements, {
-      y: 80,
+      y: 60,
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
       ease: "power2.out",
-      stagger: 0.1,
+      stagger: 0.05,
       scrollTrigger: {
         trigger: elements[0],
         start: "top 90%",
@@ -30,9 +30,9 @@ const Dashboard = () => {
 
     gsap.to(elements, {
       opacity: 1,
-      duration: 1,
+      duration: 0.8,
       ease: "power2.out",
-      stagger: 0.1,
+      stagger: 0.05,
       scrollTrigger: {
         trigger: elements[0],
         start: "top 90%",
