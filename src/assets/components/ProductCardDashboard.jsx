@@ -1,4 +1,7 @@
 import PoppingBubble from "./PoppingBubble.jsx";
+// import PoppingBubblePaused from "./PoppingBubblePaused.jsx";
+// import PoppingBubbleStopped from "./PoppingBubbleStopped.jsx";
+
 import ProductStatus from "../back-end-things/ProductStatus.jsx";
 import ProductExpiry from "../back-end-things/ProductExpiry.jsx";
 import ProductName from "../back-end-things/ProductName.jsx";
@@ -23,6 +26,8 @@ const ProductCardDashboard = () => {
         <div className="flex justify-between items-center flex-wrap w-full !mt-1.5">
           <div className="flex items-center gap-2 !pl-1">
             <PoppingBubble />
+            {/* <PoppingBubblePaused />  */} {/* I don't know how you do it with backend, but at least here are the status bubbles */}
+            {/* <PoppingBubbleStopped /> */}
             <ProductStatus status="Working" />
           </div>
 
