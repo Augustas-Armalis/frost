@@ -1,7 +1,11 @@
-import UsageChartShadcn from "../back-end-things/UsageChartShadcn.jsx";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import TotalEarningsBox from "../components/TotalEarningsBox.jsx"
+import TotalReferralsBox from "../components/TotalReferralsBox.jsx"
+import UsableBalanceBox from "../components/UsableBalanceBox.jsx"
+import ReferralLinkBox from "../components/ReferralLinkBox.jsx"
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -72,14 +76,12 @@ const Affiliate = () => {
 
       <div className="boxes-container flex items-center gap-4 justify-center flex-wrap max-w-[1150px] max-[692px]:!w-full">
 
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && affiliateRefs.current.push(el)} />
-      
+      <TotalEarningsBox ref={(el) => el && affiliateRefs.current.push(el)}/>
+      <TotalReferralsBox ref={(el) => el && affiliateRefs.current.push(el)}/>
+      <UsableBalanceBox ref={(el) => el && affiliateRefs.current.push(el)}/>
+
+      <ReferralLinkBox ref={(el) => el && affiliateRefs.current.push(el)}/>
+      <ReferralLinkBox ref={(el) => el && affiliateRefs.current.push(el)}/>
 
 
       </div>
