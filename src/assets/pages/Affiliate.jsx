@@ -74,13 +74,12 @@ const Affiliate = () => {
           </p>
       </div>
 
-      <div className="boxes-container flex items-center gap-4 justify-center flex-wrap max-w-[1150px] max-[692px]:!w-full">
+      <div className="boxes-container flex items-center gap-4 justify-center flex-wrap max-[1464px]:max-w-[757px] max-w-[1150px] max-[692px]:!w-full">
 
       <TotalEarningsBox ref={(el) => el && affiliateRefs.current.push(el)}/>
       <TotalReferralsBox ref={(el) => el && affiliateRefs.current.push(el)}/>
       <UsableBalanceBox ref={(el) => el && affiliateRefs.current.push(el)}/>
 
-      <ReferralLinkBox ref={(el) => el && affiliateRefs.current.push(el)}/>
       <ReferralLinkBox ref={(el) => el && affiliateRefs.current.push(el)}/>
 
 

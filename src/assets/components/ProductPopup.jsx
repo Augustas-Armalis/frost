@@ -56,7 +56,7 @@ const ProductPopup = () => {
   return (
     <div className="w-full product-popup hidden h-full bg-black/50 backdrop-blur-[2px] z-4000 fixed top-0 left-0 items-center justify-center">
       <button
-        onClick={handleClosePopup} className="absolute top-6 right-6 cursor-pointer z-5000 !bg-[#1b2e50] border border-white/20 !rounded-[10px] !p-2.5 hover:opacity-80">
+        onClick={handleClosePopup} className="absolute top-6 right-6 cursor-pointer z-5000 !bg-[#1b2e50] border border-white/20 !rounded-[10px] !p-3 hover:opacity-80">
         <img src="src/assets/images/icons/close.svg" alt="close" className="w-[28px]" />
       </button>
 
