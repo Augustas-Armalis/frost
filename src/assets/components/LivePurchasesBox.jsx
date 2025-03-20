@@ -1,4 +1,5 @@
 import BigPoppingBubble from "../components/BigPoppingBubble.jsx"
+import LivePurchase from "../components/LivePurchase.jsx"
 
 const LivePurchasesBox = ({ref}) => {
 
@@ -11,9 +12,27 @@ const LivePurchasesBox = ({ref}) => {
         <p className="text-3xl font-bold max-[402px]:text-2xl">Live Purchases</p>
       </div>
 
-      <div className="activity-container !mt-4 overflow-y-scroll overflow-x-hidden scrollbar-hidden h-[296px] flex flex-col gap-6 !pb-4 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_100%)]">
-        <div></div>
+      <div className="activity-container !mt-4 overflow-y-scroll overflow-x-hidden scrollbar-hidden h-[296px] flex flex-row flex-wrap gap-3 !pb-4 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_100%)] !pr-2 max-[1464px]:gap-3 max-[1028px]:justify-center">
+        
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        <LivePurchase />
+        
+        
       </div>
+      
+
+
+
 
     </div>
 
