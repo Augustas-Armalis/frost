@@ -3,6 +3,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
+import UserDisplayNameSettings from"../back-end-things/UserDisplayNameSettings.jsx"
+// import UserNameSettings from"../back-end-things/UserNameSettings.jsx"
+import ProfileDashboardSettings from "../components/ProfileDashboardSettings.jsx";
+import ProductsDashboardSettings from "../components/ProductsDashboardSettings.jsx";
+import ConnectAccSettings from "../components/ConnectAccSettings.jsx";
+
+
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,13 +79,35 @@ const Settings = () => {
 
       <div className="boxes-container flex items-center gap-4 justify-center flex-wrap max-w-[1150px] max-[692px]:!w-full">
 
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
-      <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} />
+      <div className="flex flex-col w-[563px] max-[1464px]:gap-4 max-[1464px]:w-[757px] justify-center max-[1074px]:w-full max-[1464px]:flex-row max-[980px]:flex-col max-[980px]:gap-0">
+          <div>
+            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+            {/* <UserNameSettings ref={(el) => el && settingsRefs.current.push(el)}/> */}
+            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+          </div>
+          <div>
+            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+          </div>
+        </div>
+
+
+        <div className="w-[563px] relative max-[1074px]:w-full max-[1464px]:w-[757px]">
+          <ProfileDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+        </div>
+
+        <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
+          <ConnectAccSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+        </div>
+
+        <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
+          <ProductsDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+        </div>
+
+
+
+
+        {/* <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} /> */}
 
       </div>
     </div>
