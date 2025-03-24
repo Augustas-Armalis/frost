@@ -12,9 +12,8 @@ const ReferralLinkBox = ({ ref }) => {
   };
 
   return (
-    <div
-    ref={ref}
-    className="glass-box w-[563px] relative !gap-3 flex flex-col !p-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px] opacity-0 overflow-hidden justify-between max-[1464px]:w-full">
+    
+    <div ref={ref} className="glass-box w-[563px] relative !gap-3 flex flex-col !p-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px] opacity-0 overflow-hidden justify-between max-[1464px]:w-full">
 
       <div className="flex flex-col gap-5">
         <p className="text-3xl font-bold max-[402px]:text-2xl ">Your Referral Link</p>
@@ -36,6 +35,7 @@ const ReferralLinkBox = ({ ref }) => {
         <p className="text-base max-[402px]:text-sm font-medium gray-1">Get up to 10% revenue per sale</p>
       </div>
     </div>
+
   );
 };
 

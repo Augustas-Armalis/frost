@@ -8,7 +8,6 @@ import ProductName from "../back-end-things/ProductName.jsx";
 import ProductImage from "../back-end-things/ProductImage.jsx";
 import GameLogo from "../back-end-things/GameLogo.jsx";
 
-
 const ProductCardDashboardSettings = () => {
   return (
     <div className="w-[248px] h-fit !pb-12 bg-[#436AAE] relative overflow-hidden rounded-2xl border border-white/20 max-[828px]:w-[300px] max-[692px]:w-[220px] max-[538px]:w-[300px]">

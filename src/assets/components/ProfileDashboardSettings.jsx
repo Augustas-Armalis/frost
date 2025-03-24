@@ -20,6 +20,7 @@ const ProfileDashboardSettings = ({ ref }) => {
   };
 
   return (
+    
     <div ref={ref} className="glass-box w-fill h-[370px] max-[1074px]:w-full min-w-[370px] max-[402px]:min-w-full overflow-hidden max-[692px]:h-[300px] opacity-0">
       <div className="flex justify-between w-full h-full">
         <div className="flex align-center justify-between w-fit flex-col h-full !pb-6 flex-shrink-0 max-[692px]:!pb-4">
@@ -52,6 +53,7 @@ const ProfileDashboardSettings = ({ ref }) => {
         <input ref={bannerFileInput} type="file" className="hidden" />
       </div>
     </div>
+
   );
 };
 

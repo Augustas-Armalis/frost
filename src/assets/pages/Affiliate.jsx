@@ -8,7 +8,6 @@ import ReferralLinkBox from "../components/ReferralLinkBox.jsx"
 import RequestPayoutBox from "../components/RequestPayoutBox.jsx"
 import LivePurchasesBox from "../components/LivePurchasesBox.jsx"
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Affiliate = () => {
@@ -59,7 +58,6 @@ const Affiliate = () => {
       stagger: 0.1,
     });
   }, []);
-  
 
   return (
    
@@ -87,11 +85,8 @@ const Affiliate = () => {
 
         <LivePurchasesBox ref={(el) => el && affiliateRefs.current.push(el)}/>
 
-
-
       </div>
     </div>
-    
 
   )
 }

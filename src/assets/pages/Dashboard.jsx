@@ -58,7 +58,6 @@ const Dashboard = () => {
     });
   }, []);
   
-
   return (
     <div className="!pl-[298px] !pt-[106px] !pr-6 !pb-6 relative z-40 h-fit min-h-screen text-left flex items-center justify-top flex-col max-[692px]:!pl-[16px] max-[692px]:!pr-[16px] max-[402px]:!pt-[96px]">
       <div className="flex flex-col gap-2 items-start w-[1150px] max-[1464px]:w-[756px] max-[1078px]:w-full">
@@ -79,6 +78,7 @@ const Dashboard = () => {
         <ProductsDashboard ref={(el) => el && dashboardRefs.current.push(el)} />
       </div>
     </div>
+    
   );
 };
 

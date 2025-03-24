@@ -8,6 +8,7 @@ const RequestPayoutBox = ({ ref }) => {
   const presets = ['PayPal', 'Crypto'];
 
   return (
+    
     <div ref={ref} className="glass-box w-[563px] h-fit !gap-3 flex flex-col !p-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px] opacity-0 overflow-hidden max-[1464px]:w-full relative">
       <p className="text-3xl font-bold max-[402px]:text-2xl">Request Payout</p>
 
@@ -56,6 +57,7 @@ const RequestPayoutBox = ({ ref }) => {
         <img src="src/assets/images/icons/Copy.png" alt="icon" className="w-[20px] h-[20px]" />
       </div>
     </div>
+
   );
 };
 

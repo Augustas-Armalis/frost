@@ -12,7 +12,7 @@ const ProductsDashboardSettings = ({ref}) => {
 
       <div className="activity-container !mt-4 overflow-y-scroll overflow-x-hidden scrollbar-hidden h-[280px] max-[1074px]:!h-[426px] flex flex-row flex-wrap gap-3 justify-center items-start !pb-4 [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_calc(100%-50px),rgba(0,0,0,0)_100%)] !pr-2">
         {/* About the height of the recent gifts products, it's dependant on how many newsletter boxes are added, so if there is 2 boxes: then the height of this activity container should be 210px, if it's 3 boxes, then it's: 280px. It's basically +- roughly 70px every new newsletter box. So adjust only the h-[..] property on the activity container ONLY, the rest is good.*/}
-        {/* I'm sorry about this inconvenience in sizing, it's because of relative newsletter box as well as to have scrollable items inside :D */}
+        {/* I'm sorry about this inconvenience in sizing, it's because of relative newsletter box as well as to have scrollable items inside, tried to go around this, maybe you will be able to figure it out, cuz I'm not an expert in tailwind yet */}
         
         <ProductCardDashboardSettings />
         <ProductCardDashboardSettings />

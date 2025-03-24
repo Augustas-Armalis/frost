@@ -35,9 +35,7 @@ createRoot(document.getElementById('root')).render(
 
     <Navbar />
     <Sidebar />
-
-
-
+    
     </BrowserRouter>
   </>
 )

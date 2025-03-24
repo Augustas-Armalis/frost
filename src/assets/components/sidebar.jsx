@@ -23,6 +23,7 @@ const Sidebar = () => {
   }, []);  
 
   return (
+
     <div className="sidebar glass-box fixed flex flex-col justify-between left-6 top-[108px] bottom-6 w-[250px] !p-[24px] z-2008 max-[692px]:hidden opacity-0">
       <div className="flex flex-col w-full gap-2">
         <SidebarButton path="/" icon="src/assets/images/icons/dashboard.png" label="Dashboard" isActive={location.pathname === "/"} />
@@ -33,6 +34,7 @@ const Sidebar = () => {
       <SidebarButton path="/settings" icon="src/assets/images/icons/settings.png" label="Settings" isActive={location.pathname === "/settings"} />
 
     </div>
+    
   );
 };
 

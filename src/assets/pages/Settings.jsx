@@ -3,14 +3,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
 import UserDisplayNameSettings from"../back-end-things/UserDisplayNameSettings.jsx"
+import UserNameSettings from"../back-end-things/UserNameSettings.jsx"
+import EmailSettings from"../back-end-things/EmailSettings.jsx"
+import PasswordSettings from"../back-end-things/PasswordSettings.jsx"
+
 import ProfileDashboardSettings from "../components/ProfileDashboardSettings.jsx";
 import ProductsDashboardSettings from "../components/ProductsDashboardSettings.jsx";
 import ConnectAccSettings from "../components/ConnectAccSettings.jsx";
-
-
-
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,7 +61,6 @@ const Settings = () => {
       stagger: 0.1,
     });
   }, []);
-  
 
   return (
    
@@ -80,12 +78,11 @@ const Settings = () => {
       <div className="flex flex-col w-[563px] max-[1464px]:gap-4 max-[1464px]:w-[757px] justify-center max-[1074px]:w-full max-[1464px]:flex-row max-[980px]:flex-col max-[980px]:gap-0">
           <div>
             <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
-            {/* <UserNameSettings ref={(el) => el && settingsRefs.current.push(el)}/> */}
-            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+            <UserNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
           </div>
           <div>
-            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
-            <UserDisplayNameSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+            <EmailSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+            <PasswordSettings ref={(el) => el && settingsRefs.current.push(el)}/>
           </div>
         </div>
 
@@ -104,13 +101,8 @@ const Settings = () => {
           </div>
         </div>
 
-
-
-
-
       </div>
     </div>
-    
 
   )
 }

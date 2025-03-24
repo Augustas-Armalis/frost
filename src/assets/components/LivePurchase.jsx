@@ -4,7 +4,6 @@ import BuyersName from "../back-end-things/BuyersName.jsx"
 import PurchaseDate from "../back-end-things/PurchaseDate.jsx"
 import PurchasePrice from "../back-end-things/PurchasePrice.jsx"
 
-
 const LivePurchase = () => {
   return (
     <div className="w-[357px] h-[165px] max-w-[380px] relative overflow-hidden rounded-3xl border border-white/20 bg-[#436AAE] max-[1464px]:w-[345px] max-[1078px]:w-[320px] max-[1028px]:w-[380px] max-[730px]:w-[325px] max-[692px]:w-[370px]">

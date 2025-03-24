@@ -23,7 +23,6 @@ const ConnectAccSettings = ({ ref }) => {
           <NewsBox index={0} title="Newsletter title" description="What will you get by joining, discounts, ect." isChecked={checkedBoxes[0]} onClick={toggleCheckbox} />
           <NewsBox index={1} title="Newsletter title" description="What will you get by joining, discounts, ect." isChecked={checkedBoxes[1]} onClick={toggleCheckbox} />
           <NewsBox index={2} title="Newsletter title" description="What will you get by joining, discounts, ect." isChecked={checkedBoxes[2]} onClick={toggleCheckbox} />
-          {/* <NewsBox index={3} title="Newsletter title" description="What will you get by joining, discounts, ect." isChecked={checkedBoxes[3]} onClick={toggleCheckbox} /> */}
         </div>
       </div>
     </>

@@ -5,8 +5,6 @@ import { useEffect, useRef } from "react";
 import ProductBox from "../components/ProductBox";
 import ProductPopup from "../components/ProductPopup";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Subscriptions = () => {
@@ -58,7 +56,6 @@ const Subscriptions = () => {
     });
   }, []);
   
-
   return (
     <>
     <div className="!pl-[298px] !pt-[106px] !pr-6 !pb-6 relative z-40 h-fit min-h-screen text-left flex items-center justify-top flex-col max-[692px]:!pl-[16px] max-[692px]:!pr-[16px] max-[402px]:!pt-[96px]">
@@ -74,7 +71,6 @@ const Subscriptions = () => {
       </div>
 
       <div className="boxes-container flex items-center gap-4 justify-center flex-wrap max-w-[1150px] max-[692px]:!w-full">
-
 
       <ProductBox ref={(el) => el && subscriptionsRefs.current.push(el)} />
       <ProductBox ref={(el) => el && subscriptionsRefs.current.push(el)} />
@@ -103,9 +99,7 @@ const Subscriptions = () => {
       </div>
     </div>
     
-
     <ProductPopup />
-
 
     </>
   );

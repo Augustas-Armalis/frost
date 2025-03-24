@@ -7,7 +7,6 @@ import ProductBtn from "../buttons/ProductBtn.jsx";
 // import PoppingBubblePaused from "./PoppingBubblePaused.jsx";
 // import PoppingBubbleStopped from "./PoppingBubbleStopped.jsx";
 
-
 const ProductBox = ({ref}) => {
   return (
     <>

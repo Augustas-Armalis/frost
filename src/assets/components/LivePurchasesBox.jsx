@@ -27,13 +27,7 @@ const LivePurchasesBox = ({ref}) => {
         <LivePurchase />
         <LivePurchase />
         
-        
       </div>
-      
-
-
-
-
     </div>
 
   )
