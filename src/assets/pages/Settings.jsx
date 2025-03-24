@@ -1,10 +1,8 @@
-import UsageChartShadcn from "../back-end-things/UsageChartShadcn.jsx";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
 import UserDisplayNameSettings from"../back-end-things/UserDisplayNameSettings.jsx"
-// import UserNameSettings from"../back-end-things/UserNameSettings.jsx"
 import ProfileDashboardSettings from "../components/ProfileDashboardSettings.jsx";
 import ProductsDashboardSettings from "../components/ProductsDashboardSettings.jsx";
 import ConnectAccSettings from "../components/ConnectAccSettings.jsx";
@@ -96,18 +94,19 @@ const Settings = () => {
           <ProfileDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
         </div>
 
-        <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
-          <ConnectAccSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+        <div className="this-cont flex gap-4 h-fit w-full max-[1464px]:flex-col">
+          <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
+            <ConnectAccSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+          </div>
+
+          <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
+            <ProductsDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
+          </div>
         </div>
 
-        <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
-          <ProductsDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
-        </div>
 
 
 
-
-        {/* <UsageChartShadcn ref={(el) => el && settingsRefs.current.push(el)} /> */}
 
       </div>
     </div>

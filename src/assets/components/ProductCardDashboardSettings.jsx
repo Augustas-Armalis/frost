@@ -3,7 +3,7 @@ import PoppingBubble from "./PoppingBubble.jsx";
 // import PoppingBubbleStopped from "./PoppingBubbleStopped.jsx";
 
 import ProductStatus from "../back-end-things/ProductStatus.jsx";
-import ProductExpiry from "../back-end-things/ProductExpiry.jsx";
+import ProductGifted from "../back-end-things/ProductGifted.jsx";
 import ProductName from "../back-end-things/ProductName.jsx";
 import ProductImage from "../back-end-things/ProductImage.jsx";
 import GameLogo from "../back-end-things/GameLogo.jsx";
@@ -31,7 +31,7 @@ const ProductCardDashboardSettings = () => {
             <ProductStatus status="Working" />
           </div>
 
-          <ProductExpiry date="25/06/14" />
+          <ProductGifted date="XX/XX/XX" />
         </div>
         
       </div>
