@@ -70,7 +70,7 @@ img::selection {
 }
 
 ::-webkit-scrollbar {
-   width: 0px; /* invisible scroll bar for now. Idk if to add it or not */
+   width: 0px; /* invisible scroll bar for now. Idk if to add it or not, it looks good without it*/
 }
 
 /* ------------------------------------------------------------ */
@@ -85,7 +85,7 @@ img::selection {
 }
 
 .gray-2{
-  color: #A2A8C3;
+  color: #bbc2de;
 }
 
 

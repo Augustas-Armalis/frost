@@ -94,7 +94,7 @@ const Settings = () => {
           <ProfileDashboardSettings ref={(el) => el && settingsRefs.current.push(el)}/>
         </div>
 
-        <div className="this-cont flex gap-4 h-fit w-full max-[1464px]:flex-col">
+        <div className="this-cont flex gap-4 h-fit w-fit max-[1464px]:flex-col max-[692px]:w-full">
           <div className="w-[563px] relative max-[1078px]:w-full max-[1464px]:w-[757px]">
             <ConnectAccSettings ref={(el) => el && settingsRefs.current.push(el)}/>
           </div>
