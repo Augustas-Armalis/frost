@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CustomDropdown from "../components/CustomDropdown.jsx"
 
 const RequestPayoutBox = ({ ref }) => {
   const [amount, setAmount] = useState('');
@@ -9,7 +10,7 @@ const RequestPayoutBox = ({ ref }) => {
 
   return (
     
-    <div ref={ref} className="glass-box w-[563px] h-fit !gap-3 flex flex-col !p-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[8px] opacity-0 overflow-hidden max-[1464px]:w-full relative">
+    <div ref={ref} className="glass-box w-[563px] h-fit !gap-3 flex flex-col !p-5 max-[1078px]:w-full min-w-[370px] max-[402px]:min-w-full max-[402px]:!p-4 max-[402px]:!pt-3 max-[402px]:!pr-[16px] opacity-0  max-[1464px]:w-full relative z-20">
       <p className="text-3xl font-bold max-[402px]:text-2xl">Request Payout</p>
 
       <div className="flex flex-col gap-2 !mb-1">
@@ -20,23 +21,14 @@ const RequestPayoutBox = ({ ref }) => {
             <label htmlFor="amount" className="font-medium gray-1 text-base max-[402px]:text-sm !mb-2">Amount</label>
             <div className="relative">
               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-xl font-medium">$</span>
-              <input type="text" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} className="mt-2 p-2 !pl-8 bg-white/10 border border-white/20 rounded-[10px] flex items-center !pt-2 !pb-2 overflow-hidden relative shadow-[inset_0px_4px_10.8px_0px_rgba(255,255,255,0.25)] backdrop-blur-[10px] font-medium text-xl max-[402px]:text-lg w-full" placeholder="Enter amount" />
+              <input type="text" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} className="mt-2 p-2 !pl-8 bg-white/10 border border-white/20 rounded-[10px] flex items-center !pt-2 !pb-2 overflow-hidden relative shadow-[inset_0px_4px_10.8px_0px_rgba(255,255,255,0.25)] backdrop-blur-[10px] font-medium text-xl max-[402px]:text-lg w-full custom-input" placeholder="Enter amount"/>
             </div>
           </div>
 
-          {/* dropdown */}
-          <div className="mb-4 w-1/2 max-[469px]:w-full">
-            <label htmlFor="dropdown" className="font-medium text-base max-[402px]:text-sm gray-1">Payout Method</label>
-            <div className="relative w-full">
-              <select id="dropdown" value={selectedPreset} onChange={(e) => setSelectedPreset(e.target.value)} className="mt-2 p-2 !pl-3 cursor-pointer bg-white/10 border border-white/20 rounded-[10px] flex items-center !pt-2 !pb-2 overflow-hidden relative shadow-[inset_0px_4px_10.8px_0px_rgba(255,255,255,0.25)] backdrop-blur-[10px] font-medium text-xl max-[402px]:text-lg w-full appearance-none">
-                <option value="" disabled>Select</option>
-                {presets.map((preset, index) => (
-                  <option key={index} value={preset}>{preset}</option>
-                ))}
-              </select>
-              <img src="src/assets/images/icons/arrow.png" alt="Arrow" className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer" />
-            </div>
-          </div>
+
+          <CustomDropdown options={presets} value={selectedPreset} onChange={setSelectedPreset}/>
+
+
         </div>
 
         {/* email or wallet adress input */}
@@ -46,7 +38,7 @@ const RequestPayoutBox = ({ ref }) => {
               {selectedPreset === 'PayPal' ? 'Email' : selectedPreset === 'Crypto' ? 'Crypto Wallet Address' : ''}
             </label>
             <div className="relative">
-              <input type="text" id="secondInput" value={secondInput} onChange={(e) => setSecondInput(e.target.value)} className="mt-2 p-2 w-full !pl-3 bg-white/10 border border-white/20 rounded-[10px] flex items-center !pt-2 !pb-2 overflow-hidden relative shadow-[inset_0px_4px_10.8px_0px_rgba(255,255,255,0.25)] backdrop-blur-[10px] font-medium text-xl max-[402px]:text-lg" placeholder={selectedPreset === 'PayPal' ? 'your@email.com' : selectedPreset === 'Crypto' ? '0x12345...' : ''} />
+              <input type="text" id="secondInput" value={secondInput} onChange={(e) => setSecondInput(e.target.value)} className="mt-2 p-2 w-full !pl-3 bg-white/10 border border-white/20 rounded-[10px] flex items-center custom-input !pt-2 !pb-2 overflow-hidden relative shadow-[inset_0px_4px_10.8px_0px_rgba(255,255,255,0.25)] backdrop-blur-[10px] font-medium text-xl max-[402px]:text-lg" placeholder={selectedPreset === 'PayPal' ? 'your@email.com' : selectedPreset === 'Crypto' ? '0x12345...' : ''} />
             </div>
           </div>
         )}

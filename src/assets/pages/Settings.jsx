@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import UserDisplayNameSettings from"../back-end-things/UserDisplayNameSettings.jsx"
 import UserNameSettings from"../back-end-things/UserNameSettings.jsx"
 import EmailSettings from"../back-end-things/EmailSettings.jsx"
+import EnterEmailCode from"../back-end-things/EnterEmailCode.jsx"
 import PasswordSettings from"../back-end-things/PasswordSettings.jsx"
 
 import ProfileDashboardSettings from "../components/ProfileDashboardSettings.jsx";
