@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import EnterEmailCode from "./EnterEmailCode";
 
 // This was a bit of a hasstle to figure out, but from the UI perspective it works and I hope it will be easy to set it from the bacck end too, good luck!
+// If anything, let me know
 
 const EmailSettings = ({ email = "johndoe123@gmail.com", ref }) => {
   const [isEditing, setIsEditing] = useState(false);
