@@ -70,7 +70,7 @@ img::selection {
 }
 
 ::-webkit-scrollbar {
-   width: 0px; /* invisible scroll bar for now. Idk if to add it or not, but it looks good without it*/
+   width: 0px;
 }
 
 /* ------------------------------------------------------------ */
@@ -98,3 +98,14 @@ img::selection {
   border-radius: 10px;
   cursor: pointer;
 } 
+
+.custom-input::selection {
+  background-color: #02ACF8;
+  color: white;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #10C2F7;
+}
+
